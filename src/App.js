@@ -13,8 +13,6 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-
-      {/* <ProductInfoPage /> */}
       <Routes>
         <Route path="/" Component={HomePage}/>
         <Route path="/products" Component={ProductsPage}/>
