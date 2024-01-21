@@ -1,29 +1,31 @@
 import "./App.css";
-import ContactForm from "./components/ContactForm";
-import Dropdown from "./components/Dropdown";
-import Features from "./components/Features";
-import FilterComponent from "./components/FilterComponent";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Login from "./components/Login";
 import Navbar from "./components/Navbar";
-import ParentComponent from "./components/Parent";
-import ProductView from "./components/ProductView";
-import Products from "./components/Products";
-import Register from "./components/Register";
-import SearchBar from "./components/SearchBar";
-import ServiceCards from "./components/ServiceCard";
-import ViewMore from "./components/ViewMore";
 import HomePage from "./pages/HomePage";
 import ProductInfoPage from "./pages/ProductInfoPage";
 import ProductsPage from "./pages/ProductsPage";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import LoginPage from './pages/LoginPage'
+import { Route, Routes } from "react-router-dom";
+import RegisterPage from "./pages/RegisterPage";
+import ContactPage from "./pages/ContactPage";
+import AboutPage from "./pages/AboutPage";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
+<<<<<<< HEAD
       <ProductInfoPage />
+=======
+      <Routes>
+        <Route path="/" Component={HomePage}/>
+        <Route path="/products" Component={ProductsPage}/>
+        <Route path="/login" Component={LoginPage}/>
+        <Route path="/register" Component={RegisterPage}/>
+        <Route path="/contact" Component={ContactPage}/>
+        <Route path="/about" Component={AboutPage}/>
+        
+      </Routes>
+>>>>>>> 8b47f9640cb83eeb0d3bedb6266c77954fd44767
     </div>
   );
 }
