@@ -92,7 +92,7 @@ function Register() {
 
         <p class="mt-10 text-center text-sm text-gray-500">
           Already a member?
-          <Link to='/register'
+          <Link to='/login'
             class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
             Login Now
           </Link>
