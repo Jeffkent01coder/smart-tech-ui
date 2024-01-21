@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { BiMenu } from "react-icons/bi";
+import { BiMenu, BiX } from "react-icons/bi";
 import { Link } from "react-router-dom";
-
 
 function Navbar() {
   const [open, setOpen] = useState(false);
 
   const handleMenu = () => {
     setOpen(!open);
-    console.log(open);
   };
 
   const [scrolling, setScrolling] = useState(false);
@@ -37,37 +35,55 @@ function Navbar() {
         Smart-<span className="text-blue-700 italic">Tech</span> Kenya
       </h2>
 
+      <div className="flex p-2 md:p-3">
+        <Link
+          to="/login"
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 md:py-1 md:px-3 lg:px-4 rounded">
+          Login
+        </Link>
+      </div>
+
+      <div className="flex p-2 md:hidden">
+        {open ? (
+          <BiX
+            onClick={handleMenu}
+            className="text-white text-3xl ml-auto mr-4 cursor-pointer"
+          />
+        ) : (
+          <BiMenu
+            onClick={handleMenu}
+            className="text-white text-3xl ml-auto mr-4 cursor-pointer"
+          />
+        )}
+      </div>
+
       <ul
-        className={`flex p-2 md:flex hidden ${
-          open ? "absolute w-full top" : "hidden"
+        className={`flex p-2 md:flex ${
+          open
+            ? "flex-col w-full absolute top-14 bg-pink-500"
+            : "hidden md:flex"
         }`}>
-        <Link to='/' className="ml-2 text-white text-xl p-2 md:p-3 hover:bg-blue-400 hover:text-white transition duration-300 ease-in-out rounded-full cursor-pointer">
+        <Link
+          to="/"
+          className="ml-2 text-white text-xl p-2 md:p-3 hover:bg-blue-400 hover:text-white transition duration-300 ease-in-out rounded-full cursor-pointer">
           Home
         </Link>
-        <Link to='/products' className="ml-2 text-white text-xl p-2 md:p-3 hover:bg-blue-400 hover:text-white transition duration-300 ease-in-out rounded-full cursor-pointer">
+        <Link
+          to="/products"
+          className="ml-2 text-white text-xl p-2 md:p-3 hover:bg-blue-400 hover:text-white transition duration-300 ease-in-out rounded-full cursor-pointer">
           Products
         </Link>
-        <Link to='/about' className="ml-2 text-white text-xl p-2 md:p-3 hover:bg-blue-400 hover:text-white transition duration-300 ease-in-out rounded-full cursor-pointer">
+        <Link
+          to="/about"
+          className="ml-2 text-white text-xl p-2 md:p-3 hover:bg-blue-400 hover:text-white transition duration-300 ease-in-out rounded-full cursor-pointer">
           About
         </Link>
-        <Link to='/contact' className="ml-2 text-white text-xl p-2 md:p-3 hover:bg-blue-400 hover:text-white transition duration-300 ease-in-out rounded-full cursor-pointer">
+        <Link
+          to="/contact"
+          className="ml-2 text-white text-xl p-2 md:p-3 hover:bg-blue-400 hover:text-white transition duration-300 ease-in-out rounded-full cursor-pointer">
           Contacts
         </Link>
       </ul>
-
-      <div className="flex p-2 md:p-3">
-        <Link to='/login' className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 md:py-1 md:px-3 lg:px-4 rounded">
-          Login
-        </Link>
-        {/* <button className="bg-transparent ml-2 md:ml-3 hover:bg-blue-500 text-white font-semibold hover:text-white py-1 px-1 md:py-1 md:px-2 lg:px-3 border border-blue-500 hover:border-transparent rounded">
-          Cart: <span>10</span>
-        </button> */}
-      </div>
-
-      <BiMenu
-        onClick={handleMenu}
-        className="text-white text-3xl mr-4 md:hidden"
-      />
     </nav>
   );
 }

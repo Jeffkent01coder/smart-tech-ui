@@ -2,7 +2,7 @@ import React from "react";
 
 function SearchBar() {
   return (
-    <div class="relative max-w-sm mx-auto mt-20">
+    <div class="relative max-w-sm mx-auto mt-10 ml-4 mr-4">
       <input
         class="w-full py-2 px-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
         type="search"
