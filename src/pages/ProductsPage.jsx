@@ -3,6 +3,7 @@ import ParentComponent from "../components/Parent";
 import Products from "../components/Products";
 import Pagination from "../components/Pagination";
 import Footer from "../components/Footer";
+import SearchBar from '../components/SearchBar';
 
 function ProductsPage() {
   const currentPage = 1;
@@ -15,6 +16,7 @@ function ProductsPage() {
 
   return (
     <div>
+      <SearchBar/>
       <ParentComponent />
       <Products />
       <Pagination
