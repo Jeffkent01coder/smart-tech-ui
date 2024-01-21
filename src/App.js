@@ -15,6 +15,7 @@ import SearchBar from "./components/SearchBar";
 import ServiceCards from "./components/ServiceCard";
 import ViewMore from "./components/ViewMore";
 import HomePage from "./pages/HomePage";
+import ProductInfoPage from "./pages/ProductInfoPage";
 import ProductsPage from "./pages/ProductsPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -22,7 +23,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <HomePage />
+      <ProductInfoPage />
     </div>
   );
 }
