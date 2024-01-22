@@ -4,12 +4,14 @@ import Products from "../components/Products";
 import Features from "../components/Features";
 import ServiceCards from "../components/ServiceCard";
 import Footer from "../components/Footer";
+import ViewMore from '../components/ViewMore'
 
 function HomePage() {
   return (
     <div>
       <Header />
-      <Products />
+      <Products title = "In Stock" />
+      <ViewMore/>
       <Features />
       <ServiceCards />
       <Footer />

@@ -13,12 +13,8 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      <ProductInfoPage />
-=======
->>>>>>> 130b8b1b2de1b59671662cfa96c8152e816ca0b3
+
+      {/* <ProductInfoPage /> */}
       <Routes>
         <Route path="/" Component={HomePage}/>
         <Route path="/products" Component={ProductsPage}/>
@@ -26,12 +22,8 @@ function App() {
         <Route path="/register" Component={RegisterPage}/>
         <Route path="/contact" Component={ContactPage}/>
         <Route path="/about" Component={AboutPage}/>
-        
+        <Route path="/product_detail" Component={ProductInfoPage}/>        
       </Routes>
-<<<<<<< HEAD
-=======
->>>>>>> 8b47f9640cb83eeb0d3bedb6266c77954fd44767
->>>>>>> 130b8b1b2de1b59671662cfa96c8152e816ca0b3
     </div>
   );
 }
